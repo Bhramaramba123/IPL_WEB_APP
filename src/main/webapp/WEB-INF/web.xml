@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+	id="IPL WEB APP" version="3.0">
+	<display-name>Archetype Created Web Application</display-name>
+	<servlet>
+		<servlet-name>DefaultServlet</servlet-name>
+		<display-name>DefaultServlet</display-name>
+		<description></description>
+		<servlet-class>in.co.ipl.servlets.DefaultServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>HomeServlet</servlet-name>
+		<display-name>HomeServlet</display-name>
+		<description></description>
+		<servlet-class>in.co.ipl.servlets.HomeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TeamServlet</servlet-name>
+		<display-name>TeamServlet</display-name>
+		<description></description>
+		<servlet-class>in.co.ipl.servlets.TeamServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DefaultServlet</servlet-name>
+		<url-pattern>/status</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet-mapping>
+		<servlet-name>HomeServlet</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TeamServlet</servlet-name>
+		<url-pattern>/team</url-pattern>
+	</servlet-mapping>
+
+</web-app>
