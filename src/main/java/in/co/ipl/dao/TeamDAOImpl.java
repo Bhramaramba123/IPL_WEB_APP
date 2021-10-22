@@ -77,6 +77,7 @@ public class TeamDAOImpl implements TeamDAO
 			
 			System.out.println(preparedStatement);
 			result = preparedStatement.executeQuery();	
+			
 		}
 		catch (SQLException e)
 		{
@@ -91,15 +92,21 @@ public class TeamDAOImpl implements TeamDAO
 	{
 		Team teamDetails = new Team();
 		try {
+			 while(result.next())
+			 {
+				 teamDetails.setTotalSix(result.getInt("totalSix"));
+					teamDetails.setNetRunRate(result.getDouble("netRunRate"));
+					teamDetails.setKnockOut(result.getBoolean("isKnockOut"));
+					teamDetails.setTeamName(Frenchaices.getFranchaicesByString(result.getString("franchasie")));
+			 }
+//		    teamDetails.setTotalSix(result.getInt("totalSix"));
+//			teamDetails.setNetRunRate(result.getDouble("netRunRate"));
+//			teamDetails.setKnockOut(result.getBoolean("isKnockOut"));
+//			teamDetails.setTeamName(Frenchaices.getFranchaicesByString(result.getString("franchasie")));
 			
-			teamDetails.setTotalSix(result.getInt(2));
-			teamDetails.setNetRunRate(result.getDouble(3));
-			teamDetails.setKnockOut(result.getBoolean(4));
-			teamDetails.setTeamName(Frenchaices.getFranchaicesByString(result.getString(5)));
 			
 			
-			
-			System.out.println(teamDetails.toString());
+			//System.out.println(teamDetails.toString());
 		} 
 		catch (SQLException e) 
 		{

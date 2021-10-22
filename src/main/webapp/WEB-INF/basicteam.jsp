@@ -15,7 +15,7 @@
 </ul>
 
 <h3>Players</h3>
-
+${team}
 <ul>
 <c:forEach items = "${team.players}" var = "players" >
        <li> ${players} </li>

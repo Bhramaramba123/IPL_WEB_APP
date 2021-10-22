@@ -15,6 +15,7 @@ import in.co.ipl.model.Person;
 import in.co.ipl.model.Player;
 import in.co.ipl.model.Team;
 import in.co.ipl.services.TeamServiceImpl;
+import in.co.ipl.utils.Frenchaices;
 
 /**
  * Servlet implementation class TeamServlet
@@ -52,7 +53,8 @@ public class TeamServlet extends HttpServlet {
 		TeamServiceImpl teamService = new TeamServiceImpl();
 		
 		log(request.getParameter("name"));
-		request.setAttribute("team", teamService.getTeamDetailsByName(request.getParameter("name")));
+	    request.setAttribute("team", teamService.getTeamDetailsByName(request.getParameter("name")));
+		//request.setAttribute("team", team);
 		
 		
 		//request.setAttribute("team", cskPlayerList.toString());

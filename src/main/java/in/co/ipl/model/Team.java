@@ -132,8 +132,19 @@ public class Team
 		String teamData = "";
 		teamData = teamData.concat(" Team Name " + getTeamName().Name);
 		teamData = teamData.concat(System.lineSeparator());
-		teamData = teamData.concat(getPlayers().toString());
-		teamData = teamData.concat(getMembers().toString());
+		for(Player player : getPlayers())
+		{
+			teamData = teamData.concat(player.toString());
+			teamData = teamData.concat(System.lineSeparator());
+		}
+		
+		for(Member member : getMembers())
+		{
+			teamData = teamData.concat(member.toString());
+			teamData = teamData.concat(System.lineSeparator());
+		}
+		
+		
 		
 		return teamData;
 	}

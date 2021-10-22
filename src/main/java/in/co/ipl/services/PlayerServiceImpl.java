@@ -22,6 +22,7 @@ public class PlayerServiceImpl implements PlayerService
 	public List<Player> getPlayerList() 
 	{
 		return playerList;
+		
 	}
 
 	public void setPlayerList(List<Player> playerList) 
@@ -57,6 +58,7 @@ public class PlayerServiceImpl implements PlayerService
 		// TODO Auto-generated method stub
 		List<Player> subPlayersList = new ArrayList<Player>();
 		//PlayerServiceImpl subPlayers = new PlayerServiceImpl();
+		
 		for (Player p: getPlayerList()) 
 		{	
 		     if(p.getFranchaices() == f)
@@ -66,6 +68,10 @@ public class PlayerServiceImpl implements PlayerService
 		}
 		//subPlayers.setPlayerList(subPlayersList);
 		return subPlayersList;
+	}
+	public List<Player> getPlayersByTeam(String teamName)
+	{
+		return playerDAO.getPlayersByTeam(teamName);
 	}
 	public void addPlayer(Player player)
 	{
