@@ -5,9 +5,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Team</title>
+
 </head>
 <body>
-<jsp:include page="basicteam.jsp" />  
+
+
 </body>
 </html>

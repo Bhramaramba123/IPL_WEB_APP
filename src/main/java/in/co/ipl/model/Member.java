@@ -3,6 +3,8 @@ package in.co.ipl.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import in.co.ipl.utils.Frenchaices;
+
 
 
 public class Member extends Person

@@ -1,4 +1,4 @@
-package in.co.ipl.model;
+package in.co.ipl.utils;
 
 public enum Frenchaices 
 {

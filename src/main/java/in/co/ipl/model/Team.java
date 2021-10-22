@@ -2,6 +2,10 @@ package in.co.ipl.model;
 
 import java.util.List;
 
+import in.co.ipl.exceptions.RunRateException;
+import in.co.ipl.exceptions.ZeroSixException;
+import in.co.ipl.utils.Frenchaices;
+
 
 public class Team 
 {
@@ -144,30 +148,14 @@ public class Team
 		return "TotalWins";
 	}
 	
-	public String getTotalSix() throws Exception 
-	{
-		// TODO Auto-generated method stub
-		if(totalSix > 0)
-		{
-		return "TotalSix";
-		}
-		else
-		{
-			throw new Exception("Total six Cannot be Zero");
-		}
+	public int getTotalSix() 
+	{		
+		return totalSix;	
 	}
-	
-	
-	
-	public double getNetRunRate() throws Exception {
-		if(netRunRate <=1)
-		{
+
+	public double getNetRunRate() 
+	{	
 		return netRunRate;
-		}
-		else
-		{
-			throw new Exception("NetRunRate cannot be greater than 1");
-		}
 	}
 
 	public void setPlayers(List<Player> players) {

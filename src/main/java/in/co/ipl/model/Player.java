@@ -1,6 +1,6 @@
 package in.co.ipl.model;
 
-
+import in.co.ipl.utils.Frenchaices;
 
 public class Player extends Person 
 {
