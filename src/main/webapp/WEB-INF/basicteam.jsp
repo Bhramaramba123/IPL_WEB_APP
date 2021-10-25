@@ -15,8 +15,9 @@
 </ul>
 
 <h3>Players</h3>
-${team}
+
 <ul>
+
 <c:forEach items = "${team.players}" var = "players" >
        <li> ${players} </li>
        
@@ -30,5 +31,6 @@ ${team}
       </c:forEach>
 </ul>     
      
+     <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
 </body>
 </html>

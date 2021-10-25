@@ -3,6 +3,7 @@ package in.co.ipl.services;
 import java.util.List;
 
 import in.co.ipl.model.Member;
+import in.co.ipl.utils.Frenchaices;
 
 
 public interface MemberService
@@ -13,11 +14,12 @@ public interface MemberService
 	public void deleteMember(Member member);
 	public void updateMember(Member member);
 	
-	Member getMember(String fname, String lname, String team);
+	public Member getMember(String fname, String lname, String team);
 	
-	Member getMemberByID(int id);
-	List<Member> getMembersByTeam(String team);
-	List<Member> getCoachByTeam(String team);
-	List<Member> getPhysioByTeam(String team);
+	public Member getMemberByID(int id);
+	public List<Member> getMembersByTeam(Frenchaices f);
+	public List<Member> getCoachByTeam(String team);
+	public List<Member> getPhysioByTeam(String team);
 	public Member getMemberBySecondName(String s);
+	public List<Member> getMembersByTeam(String teamName);
 }

@@ -36,9 +36,10 @@ public class Utils
  {
 	 switch (s)
  	{
-		case "BATSMAN": return Player.role.Batsman;
-		case "BOWLER": return Player.role.Bowler;
-		case "ALLROUNDER": return Player.role.AllRounder;
+		case "Batsman": return Player.role.Batsman;
+		case "Bowler": return Player.role.Bowler;
+		case "AllRounder": return Player.role.AllRounder;
+		case "WicketKeeper": return Player.role.WicketKeeper;
 		
 		default: return null;
 			

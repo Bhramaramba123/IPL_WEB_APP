@@ -38,9 +38,6 @@ public class MemberDAOImp implements MemberDAO
 	
 	final String SELECT_MEMBER_BY_LNAME = "SELECT * FROM ipldb.members where LName = ? ";
 	
-	//-----------------------------------------------------------------------------------------------------------------------------------
-
-	
 	@Override
 	public void addMember(Member member) 
 	{
@@ -96,7 +93,7 @@ public class MemberDAOImp implements MemberDAO
 		try 
 		{
 			PreparedStatement preparedStatement = connection.prepareStatement(SELECTMEMBERS);
-			preparedStatement.setString(1, "RCB");
+			preparedStatement.setString(1, team);
 			
 			System.out.println(preparedStatement);
 			 result = preparedStatement.executeQuery();
@@ -131,13 +128,11 @@ public class MemberDAOImp implements MemberDAO
 				 {
 				 listOfMember.add(getMemberFromResult(result));
 				 }
-			 
 		}
 		catch (SQLException e)
 		{
 			printSQLException(e);	
 		}
-		//System.out.println(result.toString());
 		return listOfMember;
 	}
 	
@@ -153,22 +148,20 @@ public class MemberDAOImp implements MemberDAO
 			resultMember.setRole(utils.findMemberRoleByString(result.getString(7).toString()));
 			resultMember.setFrenchaices(Frenchaices.getFranchaicesByString(result.getString(8).toString()));
 			
-			
 			System.out.println(resultMember.toString());
 		} 
 		catch (SQLException e) 
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return resultMember;	
 	}
 
 	@Override
-	public List<Member> getPhysioByTeam(String team) {
+	public List<Member> getPhysioByTeam(String team)
+	{
 		ResultSet result = null;
 		List<Member> listOfmember = new ArrayList<Member>();
-		//Member member1 = null;
 		try 
 		{
 			PreparedStatement preparedStatement = connection.prepareStatement(SELECTPHYSIO);
@@ -181,8 +174,6 @@ public class MemberDAOImp implements MemberDAO
 			     while(result.next())
 				 {
 				 listOfmember.add(getMemberFromResult(result));
-//				 player1 = getPlayerFromResult(result);
-//				 listOfPlayer.add(player1);
 				 }
 			 
 		}
@@ -190,7 +181,6 @@ public class MemberDAOImp implements MemberDAO
 		{
 			printSQLException(e);	
 		}		
-          //System.out.println(result.toString());	
 		return listOfmember;
 	}
 
@@ -199,7 +189,6 @@ public class MemberDAOImp implements MemberDAO
 	@Override
 	public void updateMember(Member member)
 	{
-		// TODO Auto-generated method stub
 		try 
 		{
 			PreparedStatement preparedStatement = connection.prepareStatement(UPDATEMEMBER);
@@ -229,7 +218,6 @@ public class MemberDAOImp implements MemberDAO
 			
 			System.out.println(preparedStatement);
 			int result = preparedStatement.executeUpdate();
-			
 			System.out.println(result + "member record deleted");
 
 		}
@@ -237,8 +225,6 @@ public class MemberDAOImp implements MemberDAO
 		{
 			printSQLException(e);	
 		}	
-		//System.out.println(result);
-		
 	}
 
 	@Override
@@ -266,7 +252,6 @@ public class MemberDAOImp implements MemberDAO
 		{
 			printSQLException(e);	
 		}
-		//System.out.println(player.toString());
 		return member;
 	}
 
@@ -287,16 +272,12 @@ public class MemberDAOImp implements MemberDAO
 		    {
 				member = getMemberFromResult(result);
                
-		    }
-		    
-		//	player.setFirstName(result.getString(1));		 
+		    }	 
 		}
 		catch (SQLException e)
 		{
 			printSQLException(e);	
 		}
-		
-		//System.out.println(player.toString());
 		return member;
 	}
 
@@ -322,8 +303,6 @@ public class MemberDAOImp implements MemberDAO
 		{
 			printSQLException(e);	
 		}
-		
-		//System.out.println(player.toString());
 		return member;
 	}
 

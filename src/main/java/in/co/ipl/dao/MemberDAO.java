@@ -10,7 +10,6 @@ public interface MemberDAO
 	void updateMember(Member member);
 	
 	Member getMember(String fname, String lname, String team);
-	
 	Member getMemberByID(int id);
 	List<Member> getMembersByTeam(String team);
 	List<Member> getCoachByTeam(String team);

@@ -94,7 +94,7 @@ public class TeamDAOImpl implements TeamDAO
 		try {
 			 while(result.next())
 			 {
-				 teamDetails.setTotalSix(result.getInt("totalSix"));
+				    teamDetails.setTotalSix(result.getInt("totalSix"));
 					teamDetails.setNetRunRate(result.getDouble("netRunRate"));
 					teamDetails.setKnockOut(result.getBoolean("isKnockOut"));
 					teamDetails.setTeamName(Frenchaices.getFranchaicesByString(result.getString("franchasie")));

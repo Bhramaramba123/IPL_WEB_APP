@@ -4,7 +4,7 @@ import in.co.ipl.utils.Frenchaices;
 
 public class Player extends Person 
 {
-	public enum role{Batsman,Bowler,AllRounder};
+	public enum role{Batsman,Bowler,AllRounder,WicketKeeper};
 	
 	private role primaryRole;
 	private boolean isCaptain;
@@ -72,7 +72,7 @@ public class Player extends Person
 	public String toString()
 	{
 		String PlayerData = super.toString();
-		PlayerData = PlayerData.concat(" PrimryRole: " + getPrimaryRole());
+		PlayerData = PlayerData.concat(" PrimaryRole: " + getPrimaryRole());
 				
 				
 		if(isCaptain())

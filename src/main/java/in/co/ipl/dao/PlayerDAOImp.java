@@ -102,7 +102,7 @@ public class PlayerDAOImp implements PlayerDAO
 		try 
 		{
 			PreparedStatement preparedStatement = connection.prepareStatement(SELECTPLAYERS);
-			preparedStatement.setString(1, "RCB");
+			preparedStatement.setString(1, team);
 			
 			System.out.println(preparedStatement);
 			 result = preparedStatement.executeQuery();
@@ -151,8 +151,8 @@ public class PlayerDAOImp implements PlayerDAO
 	{
 		Player resultPlayer = new Player();
 		try {
-			resultPlayer.setFirstName(result.getString(2));
-			resultPlayer.setSecondName(result.getString(3));
+			resultPlayer.setFirstName(result.getString(2).trim());
+			resultPlayer.setSecondName(result.getString(3).trim());
 			resultPlayer.setAge(result.getInt(4));
 			resultPlayer.setGender(utils.findGenderByString(result.getString(5).toString()));
 			resultPlayer.setPlace(result.getString(6));

@@ -25,7 +25,8 @@ public class Person
 		}
 
 
-		public Person() {
+		public Person()
+		{
 			// TODO Auto-generated constructor stub
 		}
 

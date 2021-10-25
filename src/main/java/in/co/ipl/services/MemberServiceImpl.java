@@ -63,6 +63,7 @@ public class MemberServiceImpl implements MemberService
 		//subPlayers.setPlayerList(subPlayersList);
 		return subMembersList;
 	}
+	
 	public void addMember(Member member)
 	{
 		// TODO Auto-generated method stub
@@ -132,9 +133,9 @@ public class MemberServiceImpl implements MemberService
 	}
 
 	@Override
-	public List<Member> getMembersByTeam(String team) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Member> getMembersByTeam(String teamName) {
+		return memberDAO.getMembersByTeam(teamName);
+
 	}
 
 	
