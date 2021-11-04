@@ -34,7 +34,7 @@ public class Member extends Person
 	}
 	public void setRole(role role)
 	{
-		Role = role;
+		this.Role = role;
 	}
 	public Member(String Fname, String Lname, int age,Person.Gender gender, String place, role role , Frenchaices frenchaices) 
 	{

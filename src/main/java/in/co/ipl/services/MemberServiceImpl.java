@@ -7,8 +7,6 @@ import in.co.ipl.dao.MemberDAOImp;
 import in.co.ipl.model.Member;
 import in.co.ipl.utils.Frenchaices;
 
-
-
 public class MemberServiceImpl implements MemberService 
 {
 	
@@ -33,7 +31,7 @@ public class MemberServiceImpl implements MemberService
 
 	public MemberServiceImpl()
 	{
-		// TODO Auto-generated constructor stub
+		super();
 	}
 
 	@Override
@@ -72,7 +70,6 @@ public class MemberServiceImpl implements MemberService
 	}
     public void removeMember(Member member) 
 	{
-		// TODO Auto-generated method stub
 		memberDAO.deleteMember(member);
 		//playerList.remove(player);
 		System.out.println(toString());
@@ -80,7 +77,6 @@ public class MemberServiceImpl implements MemberService
 	@Override
 	public void updateMember(Member member) 
 	{
-		// TODO Auto-generated method stub
 		memberDAO.updateMember(member);	
 	}
 	
@@ -114,15 +110,11 @@ public class MemberServiceImpl implements MemberService
 		return member;	
 	}
 
-	@Override
-	public void deleteMember(Member member) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
-	public Member getMember(String fname, String lname, String team) {
-		// TODO Auto-generated method stub
+	public Member getMember(String fname, String lname, String team)
+	{
 		return null;
 	}
 
@@ -137,6 +129,17 @@ public class MemberServiceImpl implements MemberService
 		return memberDAO.getMembersByTeam(teamName);
 
 	}
+
+	@Override
+	public void deleteMember(Member member) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+
+	
 
 	
 

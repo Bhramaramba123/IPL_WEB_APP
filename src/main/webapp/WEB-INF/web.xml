@@ -24,6 +24,36 @@
 		<description></description>
 		<servlet-class>in.co.ipl.servlets.TeamServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>PlayerServlet_addplayer</servlet-name>
+		<display-name>PlayerServlet_addplayer</display-name>
+		<description></description>
+		<servlet-class>in.co.ipl.servlets.PlayerServlet_addplayer</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PlayerServlet_removeplayer</servlet-name>
+		<display-name>PlayerServlet_removeplayer</display-name>
+		<description></description>
+		<servlet-class>in.co.ipl.servlets.PlayerServlet_removeplayer</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MemberServletAddMember</servlet-name>
+		<display-name>MemberServletAddMember</display-name>
+		<description></description>
+		<servlet-class>in.co.ipl.servlets.MemberServletAddMember</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MemberServletRemoveMember</servlet-name>
+		<display-name>MemberServletRemoveMember</display-name>
+		<description></description>
+		<servlet-class>in.co.ipl.servlets.MemberServletRemoveMember</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TeamnameServlet</servlet-name>
+		<display-name>TeamnameServlet</display-name>
+		<description></description>
+		<servlet-class>in.co.ipl.servlets.TeamnameServlet</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>DefaultServlet</servlet-name>
@@ -40,6 +70,26 @@
 	<servlet-mapping>
 		<servlet-name>TeamServlet</servlet-name>
 		<url-pattern>/team</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TeamnameServlet</servlet-name>
+		<url-pattern>/teamname</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlayerServlet_addplayer</servlet-name>
+		<url-pattern>/player_add</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlayerServlet_removeplayer</servlet-name>
+		<url-pattern>/player_remove</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberServletAddMember</servlet-name>
+		<url-pattern>/member_add</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MemberServletRemoveMember</servlet-name>
+		<url-pattern>/member_remove</url-pattern>
 	</servlet-mapping>
 
 </web-app>

@@ -4,11 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
 </head>
 <body>
 <h1>Add New Player Form</h1>
-<form action="PlayerServlet" method="post">
+<form action="PlayerServlet_addplayer" method="post">
 <table>
 				<tr>
 					<td>First Name</td>
@@ -24,7 +23,7 @@
 				</tr>
 					<tr>
 					<td>Gender</td>
-					<td><input type="password" name="gender" /></td>
+					<td><input type="text" name="gender" /></td>
 				</tr>
 				<tr>
 					<td>Place</td>
@@ -32,7 +31,7 @@
 				</tr>
 				<tr>
 					<td>PrimaryRole</td>
-					<td><input type="password" name="primaryrole" /></td>
+					<td><input type="text" name="primaryrole" /></td>
 				</tr>
 				<tr>
 					<td>IsCaptain</td>

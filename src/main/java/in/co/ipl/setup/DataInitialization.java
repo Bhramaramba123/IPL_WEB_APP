@@ -12,11 +12,6 @@ import in.co.ipl.services.PlayerServiceImpl;
 import in.co.ipl.services.TeamServiceImpl;
 
 
-
-/**
- * @author bhramaramba_ds
- *
- */
 public interface DataInitialization 
 {
  public PlayerServiceImpl InitPlayers();

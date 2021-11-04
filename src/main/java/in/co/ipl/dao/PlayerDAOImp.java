@@ -36,7 +36,8 @@ public class PlayerDAOImp implements PlayerDAO
 	
 	final String SELECTBATSMAN = "SELECT * FROM ipldb.players where primaryRole= ? and franchasie= ?";
 	
-	final String DELETEPLAYER = "DELETE FROM ipldb.players where firstName= ? and franchasie= ?";
+	//final String DELETEPLAYER = "DELETE FROM ipldb.players where firstName= ? and franchasie= ?";
+	final String DELETEPLAYER = "DELETE FROM ipldb.players where firstName= ?";
 	
 	final String UPDATEPLAYER = "UPDATE ipldb.players set firstName= ? where id=?";
 	
@@ -232,8 +233,10 @@ public class PlayerDAOImp implements PlayerDAO
 		try 
 		{
 			PreparedStatement preparedStatement = connection.prepareStatement(DELETEPLAYER);
-			preparedStatement.setString(1, "Ab");
-			preparedStatement.setString(2, "RCB");
+			preparedStatement.setString(1, player.getFirstName());
+
+			//preparedStatement.setString(1, "Ab");
+			//preparedStatement.setString(2, "RCB");
 			
 			System.out.println(preparedStatement);
 			int result = preparedStatement.executeUpdate();

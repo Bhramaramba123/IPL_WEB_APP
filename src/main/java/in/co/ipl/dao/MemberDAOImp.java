@@ -32,7 +32,8 @@ public class MemberDAOImp implements MemberDAO
 	
 	final String SELECTPHYSIO = "SELECT * FROM ipldb.members where role= ? and franchasie= ?";
 	
-	final String DELETEMEMBER = "DELETE FROM ipldb.members where FName= ? and franchasie= ?";
+	//final String DELETEMEMBER = "DELETE FROM ipldb.members where FName= ? and franchasie= ?";
+	final String DELETEMEMBER = "DELETE FROM ipldb.members where FName= ?";
 	
 	final String UPDATEMEMBER = "UPDATE ipldb.members set FName= ? where id=?";
 	
@@ -213,8 +214,9 @@ public class MemberDAOImp implements MemberDAO
 		try 
 		{
 			PreparedStatement preparedStatement = connection.prepareStatement(DELETEMEMBER);
-			preparedStatement.setString(1, "Ab");
-			preparedStatement.setString(2, "RCB");
+			preparedStatement.setString(1, member.getFirstName());
+			//preparedStatement.setString(1, "Ab");
+			//preparedStatement.setString(2, "RCB");
 			
 			System.out.println(preparedStatement);
 			int result = preparedStatement.executeUpdate();

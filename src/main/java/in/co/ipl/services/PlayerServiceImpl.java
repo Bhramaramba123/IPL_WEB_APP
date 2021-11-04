@@ -82,15 +82,11 @@ public class PlayerServiceImpl implements PlayerService
     @Override
 	public void removePlayer(Player player) 
 	{
-		// TODO Auto-generated method stub
-		playerDAO.deletePlayer(player);
-		//playerList.remove(player);
-		System.out.println(toString());
+		playerDAO.deletePlayer(player);	
 	}
 	@Override
 	public void updatePlayer(Player player) 
 	{
-		// TODO Auto-generated method stub
 		playerDAO.updatePlayer(player);	
 	}
 	@Override

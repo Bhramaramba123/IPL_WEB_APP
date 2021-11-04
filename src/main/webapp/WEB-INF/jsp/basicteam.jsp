@@ -1,6 +1,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<%@ taglib uri= "iplapp" prefix="ipl"  %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,22 +19,28 @@
 </ul>
 
 <h3>Players</h3>
-
 <ul>
-
 <c:forEach items = "${team.players}" var = "players" >
-       <li> ${players} </li>
-       
+       <li> ${players} </li>      
 </c:forEach>
 </ul>
 
- <h3>Members</h3>
+<h3>Members</h3>
 <ul>
-<c:forEach items = "${team.members}" var = "members" >
+<c:forEach var = "members" items = "${team.members}"  >
        <li> ${members}</li>
-      </c:forEach>
-</ul>     
+</c:forEach>
+</ul> 
+
+  
+<c:set var="teamName" scope="session" value="RCB"/> 
+
+<td>  <ipl:teamName var = "team" teamName = "CSK" />    </td>		
+	
+
+ 
+   
+
      
-     <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
 </body>
 </html>

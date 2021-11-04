@@ -9,17 +9,19 @@ import javax.servlet.http.HttpServletResponse;
 
 public class HomeServlet extends HttpServlet
 {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	
+	public HomeServlet()
+    {
+        super();
+    }
+	
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
+	{
 		//super.doGet(req, resp);
-		req.getRequestDispatcher("/WEB-INF/home.jsp").forward(req, resp);
+		req.getRequestDispatcher("/WEB-INF/jsp/home.jsp").forward(req, resp);
+		
 		
 	}
 	

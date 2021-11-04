@@ -8,9 +8,9 @@ public class Person
 		FEMALE
         }
 
-		private String firstName;
+		 private String firstName;
 		private String secondName;
-		private int Age;
+		 private int Age;
 		private String place;
 		public Gender gender;
 
@@ -19,7 +19,7 @@ public class Person
 		super();
 		this.firstName = firstName;
 		this.secondName = secondName;
-		Age = age;
+		this.Age = age;
 		this.place = place;
 		this.gender = gender;
 		}
@@ -47,7 +47,7 @@ public class Person
 		return Age;
 		}
 		public void setAge(int age) {
-		Age = age;
+		this.Age = age;
 		}
 		public String getPlace() {
 		return place;

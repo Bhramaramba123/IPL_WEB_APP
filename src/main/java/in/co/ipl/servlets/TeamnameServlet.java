@@ -2,26 +2,30 @@ package in.co.ipl.servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class DefaultServlet extends HttpServlet 
-{
+@WebServlet("/TeamnameServlet")
+public class TeamnameServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-  
-    public DefaultServlet()
+
+    public TeamnameServlet()
     {
-        super();
-        
+        super(); 
     }
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		response.getWriter().append("status: ok ").append(request.getRequestURI());
+		request.getRequestDispatcher("/WEB-INF/jsp/teamname.jsp").forward(request, response);
 	}
 
 	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	{
+		
+		doGet(request, response);
+	}
 
 }
