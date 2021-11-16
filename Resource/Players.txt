@@ -1,0 +1,32 @@
+1Mahendra Singh, Dhoni,35, MALE, Ranchi,BATSMAN,true, true,CSK
+1Ambatti, Rayudu,30, MALE, Guntur, BATSMAN, false, false,CSK
+1Ravindra, Jadeja,30, MALE, Navagam, ALLROUNDER,false, false,CSK
+1Ravichandran, Ashwin,32, MALE, Chenni, BOWLER,false, false,CSK
+1Virat, Koli,30, MALE, Delhi, BATSMAN, true, false,RCB
+1Ab, de villers, 30, MALE, Bela-Bela, BATSMAN, false, true,RCB
+1DevDUtt, Padikal, 25, MALE, Bangalore, BATSMAN,false, false,RCB
+1Yuzvendra, Chahal, 32, MALE, Jind, BOWLER, false, false,RCB
+2Mahendra Singh, Dhoni,35, MALE, Ranchi,BATSMAN,true, true,RR
+2Ambatti, Rayudu,30, MALE, Guntur, BATSMAN, false, false,RR
+2Ravindra, Jadeja,30, MALE, Navagam, ALLROUNDER,false, false,RR
+2Ravichandran, Ashwin,32, MALE, Chenni, BOWLER,false, false,RR
+2Virat, Koli,30, MALE, Delhi, BATSMAN, true, false,KKR
+2Ab, de villers, 30, MALE, Bela-Bela, BATSMAN, false, true,KKR
+2DevDUtt, Padikal, 25, MALE, Bangalore, BATSMAN,false, false,KKR
+2Yuzvendra, Chahal, 32, MALE, Jind, BOWLER, false, false,KKR
+3Mahendra Singh, Dhoni,35, MALE, Ranchi,BATSMAN,true, true,DC
+3Ambatti, Rayudu,30, MALE, Guntur, BATSMAN, false, false,DC
+3Ravindra, Jadeja,30, MALE, Navagam, ALLROUNDER,false, false,DC
+3Ravichandran, Ashwin,32, MALE, Chenni, BOWLER,false, false,DC
+3Virat, Koli,30, MALE, Delhi, BATSMAN, true, false,MI
+3Ab, de villers, 30, MALE, Bela-Bela, BATSMAN, false, true,MI
+3DevDUtt, Padikal, 25, MALE, Bangalore, BATSMAN,false, false,MI
+3Yuzvendra, Chahal, 32, MALE, Jind, BOWLER, false, false,MI
+4Mahendra Singh, Dhoni,35, MALE, Ranchi,BATSMAN,true, true,PK
+4Ambatti, Rayudu,30, MALE, Guntur, BATSMAN, false, false,PK
+4Ravindra, Jadeja,30, MALE, Navagam, ALLROUNDER,false, false,PK
+4Ravichandran, Ashwin,32, MALE, Chenni, BOWLER,false, false,PK
+4Virat, Koli,30, MALE, Delhi, BATSMAN, true, false,SH
+4Ab, de villers, 30, MALE, Bela-Bela, BATSMAN, false, true,SH
+4DevDUtt, Padikal, 25, MALE, Bangalore, BATSMAN,false, false,SH
+4Yuzvendra, Chahal, 32, MALE, Jind, BOWLER, false, false,SH

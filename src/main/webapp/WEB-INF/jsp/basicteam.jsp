@@ -3,20 +3,23 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib uri= "iplapp" prefix="ipl"  %>
-
+<%@ taglib tagdir= "/WEB-INF/tags" prefix="ipltag"  %>
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
 </head>
 <body>
+<ipltag:header headertext="HEADER"></ipltag:header>
+
 <h3>Team</h3>
+<div>
 <ul>
 <li>Team Name: ${team.teamName}</li>
 <li>Team Total six: ${team.totalSix}</li>
 <li>Team NetRunRate: ${team.netRunRate}</li>
 </ul>
+</div> 
 
 <h3>Players</h3>
 <ul>
@@ -31,16 +34,9 @@
        <li> ${members}</li>
 </c:forEach>
 </ul> 
+<ipltag:teamtag team = "${team}" /> 	
 
-  
-<c:set var="teamName" scope="session" value="RCB"/> 
-
-<td>  <ipl:teamName var = "team" teamName = "CSK" />    </td>		
-	
-
- 
-   
-
+ <ipltag:footer footertext="FOOTER"></ipltag:footer>
      
 </body>
 </html>

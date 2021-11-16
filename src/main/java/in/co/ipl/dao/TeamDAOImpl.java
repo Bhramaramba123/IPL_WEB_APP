@@ -32,7 +32,7 @@ public class TeamDAOImpl implements TeamDAO
 			preparedStatement.setInt(1, team.getTotalSix());
 			preparedStatement.setDouble(2, team.getNetRunRate());
 			preparedStatement.setBoolean(3, team.isKnockOut());
-			preparedStatement.setString(4, team.getTeamName().toString());
+			preparedStatement.setString(4, team.getTeamName().Shortname);
 			
 			
 			System.out.println(preparedStatement);
@@ -68,7 +68,7 @@ public class TeamDAOImpl implements TeamDAO
 	public Team getTeamDetails(String team) 
 	{
 		ResultSet result =null;
-		//List<Team> teamResult = new ArrayList<Team>();
+		//Team teamResult = new Team();
 		
 		try 
 		{
@@ -77,6 +77,9 @@ public class TeamDAOImpl implements TeamDAO
 			
 			System.out.println(preparedStatement);
 			result = preparedStatement.executeQuery();	
+			/*
+			 * while(result.next()) { teamResult = getTeamFromResult(result); }
+			 */
 			
 		}
 		catch (SQLException e)
@@ -94,18 +97,19 @@ public class TeamDAOImpl implements TeamDAO
 		try {
 			 while(result.next())
 			 {
-				    teamDetails.setTotalSix(result.getInt("totalSix"));
-					teamDetails.setNetRunRate(result.getDouble("netRunRate"));
-					teamDetails.setKnockOut(result.getBoolean("isKnockOut"));
-					teamDetails.setTeamName(Frenchaices.getFranchaicesByString(result.getString("franchasie")));
+					System.out.println(result.toString());
+
+				    teamDetails.setTotalSix(result.getInt(2));
+					teamDetails.setNetRunRate(result.getDouble(3));
+					teamDetails.setKnockOut(result.getBoolean(4));
+					teamDetails.setTeamName(Frenchaices.getFranchaicesByString(result.getString(5)));
+					//System.out.println(teamDetails);
+
 			 }
 //		    teamDetails.setTotalSix(result.getInt("totalSix"));
 //			teamDetails.setNetRunRate(result.getDouble("netRunRate"));
 //			teamDetails.setKnockOut(result.getBoolean("isKnockOut"));
 //			teamDetails.setTeamName(Frenchaices.getFranchaicesByString(result.getString("franchasie")));
-			
-			
-			
 			//System.out.println(teamDetails.toString());
 		} 
 		catch (SQLException e) 
@@ -113,6 +117,7 @@ public class TeamDAOImpl implements TeamDAO
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		//System.out.println(teamDetails.toString());
 		return teamDetails;	
 	}
 	

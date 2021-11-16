@@ -34,6 +34,9 @@ public class PlayerServlet_removeplayer extends HttpServlet
 		
 		
 	    player.setFirstName(request.getParameter("firstname"));
+	   
+	 
+
 	    
 	    playerservice.removePlayer(player);
 	    request.setAttribute("player", player);

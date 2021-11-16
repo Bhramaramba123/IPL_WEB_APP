@@ -15,6 +15,15 @@
 		<attribute>
 		    <name>teamName</name>
 			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+		    <name>basic</name>
+			<required>true</required>
+		</attribute>
+		<attribute>
+		    <name>var</name>
+			<required>false</required>
 		</attribute>
 	</tag>
 

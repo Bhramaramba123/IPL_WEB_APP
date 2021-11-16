@@ -39,7 +39,7 @@ public class PlayerDAOImp implements PlayerDAO
 	//final String DELETEPLAYER = "DELETE FROM ipldb.players where firstName= ? and franchasie= ?";
 	final String DELETEPLAYER = "DELETE FROM ipldb.players where firstName= ?";
 	
-	final String UPDATEPLAYER = "UPDATE ipldb.players set firstName= ? where id=?";
+	final String UPDATEPLAYER = "UPDATE ipldb.players set firstName= ? WHERE secondName = ? ";
 	
 	final String SELECT_PLAYER_BY_SECONDNAME = "SELECT * FROM ipldb.players where secondName = ? ";
 	
@@ -105,7 +105,7 @@ public class PlayerDAOImp implements PlayerDAO
 			PreparedStatement preparedStatement = connection.prepareStatement(SELECTPLAYERS);
 			preparedStatement.setString(1, team);
 			
-			System.out.println(preparedStatement);
+			 System.out.println(preparedStatement);
 			 result = preparedStatement.executeQuery();
 			 while(result.next())
 			 {
@@ -116,6 +116,7 @@ public class PlayerDAOImp implements PlayerDAO
 		{
 			printSQLException(e);	
 		}
+	//	System.out.println(result.toString());
 
 		return listOfPlayer;
 		
@@ -144,14 +145,15 @@ public class PlayerDAOImp implements PlayerDAO
 		{
 			printSQLException(e);	
 		}
-		//System.out.println(result.toString());
+		System.out.println(result.toString());
 		return listOfPlayer;
 	}
 	
 	public  Player getPlayerFromResult(ResultSet result) 
 	{
 		Player resultPlayer = new Player();
-		try {
+		try 
+		{
 			resultPlayer.setFirstName(result.getString(2).trim());
 			resultPlayer.setSecondName(result.getString(3).trim());
 			resultPlayer.setAge(result.getInt(4));
@@ -199,7 +201,7 @@ public class PlayerDAOImp implements PlayerDAO
 		{
 			printSQLException(e);	
 		}		
-          //System.out.println(result.toString());	
+          System.out.println(result.toString());	
 		return listOfPlayer;
 	}
 
@@ -212,12 +214,15 @@ public class PlayerDAOImp implements PlayerDAO
 		try 
 		{
 			PreparedStatement preparedStatement = connection.prepareStatement(UPDATEPLAYER);
-			preparedStatement.setString(1, "Ab");
-			preparedStatement.setInt(2, 16);
+			preparedStatement.setString(1, player.getFirstName());
+			preparedStatement.setString(2, player.getSecondName());
+			
+			
+			//preparedStatement.setString(3, player.getFranchaices().Shortname);
 			
 			System.out.println(preparedStatement);
 			int result = preparedStatement.executeUpdate();
-			System.out.println(result + "Player record updated");
+			//System.out.println(result + "Player record updated");
 
 		}
 		catch (SQLException e)
@@ -277,7 +282,7 @@ public class PlayerDAOImp implements PlayerDAO
 		{
 			printSQLException(e);	
 		}
-		//System.out.println(player.toString());
+	System.out.println(player.toString());
 		return player;
 	}
 
@@ -307,7 +312,7 @@ public class PlayerDAOImp implements PlayerDAO
 			printSQLException(e);	
 		}
 		
-		//System.out.println(player.toString());
+		System.out.println(player.toString());
 		return player;
 	}
 
@@ -335,7 +340,7 @@ public class PlayerDAOImp implements PlayerDAO
 			printSQLException(e);	
 		}
 		
-		//System.out.println(player.toString());
+		System.out.println(player.toString());
 		return player;
 	}
 

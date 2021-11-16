@@ -35,7 +35,7 @@ public class MemberDAOImp implements MemberDAO
 	//final String DELETEMEMBER = "DELETE FROM ipldb.members where FName= ? and franchasie= ?";
 	final String DELETEMEMBER = "DELETE FROM ipldb.members where FName= ?";
 	
-	final String UPDATEMEMBER = "UPDATE ipldb.members set FName= ? where id=?";
+	final String UPDATEMEMBER = "UPDATE ipldb.members set FName= ? WHERE LName = ? ";
 	
 	final String SELECT_MEMBER_BY_LNAME = "SELECT * FROM ipldb.members where LName = ? ";
 	
@@ -107,6 +107,7 @@ public class MemberDAOImp implements MemberDAO
 		{
 			printSQLException(e);	
 		}
+		//System.out.println(result);
 
 		return listOfMember;
 		
@@ -193,12 +194,14 @@ public class MemberDAOImp implements MemberDAO
 		try 
 		{
 			PreparedStatement preparedStatement = connection.prepareStatement(UPDATEMEMBER);
-			preparedStatement.setString(1, "Ab");
-			preparedStatement.setInt(2, 1);
+			preparedStatement.setString(1, member.getFirstName());
+			preparedStatement.setString(2, member.getSecondName());
+
+			//preparedStatement.setInt(2, 1);
 			
 			System.out.println(preparedStatement);
 			int result = preparedStatement.executeUpdate();
-			System.out.println(result + "Player record updated");
+			//System.out.println(result + "Member record updated");
 
 		}
 		catch (SQLException e)
@@ -220,7 +223,7 @@ public class MemberDAOImp implements MemberDAO
 			
 			System.out.println(preparedStatement);
 			int result = preparedStatement.executeUpdate();
-			System.out.println(result + "member record deleted");
+			//System.out.println(result + "member record deleted");
 
 		}
 		catch (SQLException e)

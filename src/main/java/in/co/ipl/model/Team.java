@@ -1,7 +1,7 @@
 package in.co.ipl.model;
 
+import java.util.HashMap;
 import java.util.List;
-
 import in.co.ipl.exceptions.RunRateException;
 import in.co.ipl.exceptions.ZeroSixException;
 import in.co.ipl.utils.Frenchaices;
@@ -75,7 +75,8 @@ public class Team
 	}
  
     
-	public Team() {
+	public Team()
+	{
 		// TODO Auto-generated constructor stub
 	}
 
@@ -126,28 +127,31 @@ public class Team
 	}
 
 	
-	@Override
-	public String toString()
-	{
-		String teamData = "";
-		teamData = teamData.concat(" Team Name " + getTeamName().Name);
-		teamData = teamData.concat(System.lineSeparator());
-		for(Player player : getPlayers())
-		{
-			teamData = teamData.concat(player.toString());
-			teamData = teamData.concat(System.lineSeparator());
-		}
-		
-		for(Member member : getMembers())
-		{
-			teamData = teamData.concat(member.toString());
-			teamData = teamData.concat(System.lineSeparator());
-		}
-		
-		
-		
-		return teamData;
-	}
+	
+	  @Override 
+	  public String toString()
+	  { 
+		  String teamData = ""; 
+		  teamData = teamData.concat(" Team Name " + getTeamName().Name); 
+		  teamData = teamData.concat(System.lineSeparator());
+		  for(Player player : getPlayers()) 
+		  {
+	  teamData = teamData.concat(player.toString()); 
+	  teamData =teamData.concat(System.lineSeparator()); 
+	  }
+	  
+	  for(Member member : getMembers())
+	  { 
+		  teamData =
+	  teamData.concat(member.toString()); teamData =
+	  teamData.concat(System.lineSeparator());
+	  }
+	  
+	  
+	  
+	  return teamData; 
+	  }
+	 
 	
 	
 	public String getTotalMatchs() {
@@ -174,7 +178,7 @@ public class Team
 		this.players = players;
 		
 	}
-		
+	
 	
 	
 

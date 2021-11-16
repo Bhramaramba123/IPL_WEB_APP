@@ -45,7 +45,7 @@ public class TeamServlet extends HttpServlet
 		TeamServiceImpl teamService = new TeamServiceImpl();
         log(request.getParameter("name"));
         request.setAttribute("team", teamService.getTeamDetailsByName(request.getParameter("name")));
-        request.getRequestDispatcher("/WEB-INF/jsp/team.jsp").forward(request, response);;
+        request.getRequestDispatcher("/WEB-INF/jsp/team.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 

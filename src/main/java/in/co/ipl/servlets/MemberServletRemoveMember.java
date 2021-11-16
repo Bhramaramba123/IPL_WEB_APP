@@ -12,8 +12,6 @@ import in.co.ipl.model.Member;
 import in.co.ipl.services.MemberServiceImpl;
 
 
-
-
 @WebServlet("/MemberServletRemoveMember")
 public class MemberServletRemoveMember extends HttpServlet {
 	private static final long serialVersionUID = 1L;

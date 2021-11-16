@@ -76,9 +76,10 @@ public class TeamServiceImpl implements TeamService
 		
 		Team team = teamDAO.getTeamDetails(teamName);
 		//team.setPlayers(playerService.getPlayersByTeam(Frenchaices.getFranchaicesByString(teamName)));
+		team.setTeamName(Frenchaices.getFranchaicesByString(teamName));
+		System.out.println(team.getNetRunRate());
 		team.setPlayers(playerService.getPlayersByTeam(teamName));
 		team.setMembers(memberService.getMembersByTeam(teamName));	
-		
 		
 		return team;
 	}

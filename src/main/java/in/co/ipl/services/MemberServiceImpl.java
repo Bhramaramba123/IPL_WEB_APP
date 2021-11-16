@@ -125,7 +125,8 @@ public class MemberServiceImpl implements MemberService
 	}
 
 	@Override
-	public List<Member> getMembersByTeam(String teamName) {
+	public List<Member> getMembersByTeam(String teamName) 
+	{
 		return memberDAO.getMembersByTeam(teamName);
 
 	}
